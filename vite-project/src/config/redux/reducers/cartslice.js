@@ -6,7 +6,7 @@ export const cartSlice = createSlice({
         Cart: [{
             title: "No item found",
             id: 1,
-            quantity: 0
+            quantity: 1
         }]
     },
     reducers: {
@@ -27,7 +27,10 @@ export const cartSlice = createSlice({
         },
         Decreament: (state, action) => {
             const item = state.Cart.find(item => item.id === action.payload.id);
-            if (item && item.quantity > 0) {
+            if (item.quantity <= 1){
+                alert ("WHAT ARE YOU WILLING ?")
+            }
+                else {
                 item.quantity -= 1;
             }
         }

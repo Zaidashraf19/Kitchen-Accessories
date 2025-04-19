@@ -1,7 +1,28 @@
 import useFetch from "../hooks/usefetch"
 import { useParams } from 'react-router-dom'
+import { useDispatch, useSelector } from "react-redux"
+import { addCart } from "../config/redux/reducers/cartslice"
 
 const SingleProducts = () => {
+
+    // DISPATCH
+      const dispatch = useDispatch()
+    
+    //   SELECT
+      const select = useSelector(state => state.Cart)
+
+    // FUNCTION OF TO ADD IN CART
+      const addCartReducer = () => {
+        dispatch(addCart({
+          title: data
+        }))
+        Swal.fire({
+            title: "Added To Cart Successfully",
+            icon: "success"
+          })
+        console.log(select);
+      }
+
     const params = useParams()
     const [loading, error, data] = useFetch(`https://dummyjson.com/products/${params.id}`)
     if (loading) {
@@ -96,7 +117,7 @@ const SingleProducts = () => {
                     </h3>
                 </div>
                 {/* ADD TO CARD BUTTON */}
-                <button className="w-100 py-3 bg-black text-white font-semibold rounded-lg shadow-md cursor-pointer">
+                <button onClick={addCartReducer} className="w-100 py-3 bg-black text-white font-semibold rounded-lg shadow-md cursor-pointer">
                     Add to Cart
                 </button>
 

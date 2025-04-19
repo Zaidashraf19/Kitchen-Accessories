@@ -1,9 +1,9 @@
 import React, { useState } from "react"
-import { useDispatch , useSelector } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
 import { useNavigate } from "react-router-dom"
 import { addCart } from "../config/redux/reducers/cartslice"
 
-const Card = ({ image, description, id, index , title , product }) => {
+const Card = ({ image, description, id, index, title, product }) => {
   const navigate = useNavigate()
 
   // SELECTOR
@@ -17,6 +17,10 @@ const Card = ({ image, description, id, index , title , product }) => {
     dispatch(addCart({
       title: product
     }))
+    Swal.fire({
+      title: "Added To Cart Successfully",
+      icon: "success"
+    })
     console.log(select);
   }
 
@@ -28,11 +32,11 @@ const Card = ({ image, description, id, index , title , product }) => {
           <img
             className="rounded-lg bg-black mx-5 text-white"
             src={image}
-            // alt={title} 
-            />
+          // alt={title} 
+          />
         </div>
         <div className="p-3">
-          <p className="uppercase font-bold underline underline-offset-2 decoration-dotted">{title}</p>  
+          <p className="uppercase font-bold underline underline-offset-2 decoration-dotted">{title}</p>
           <p className="truncate text-start">{description}</p>
         </div>
         <div className="text-center flex gap-5">

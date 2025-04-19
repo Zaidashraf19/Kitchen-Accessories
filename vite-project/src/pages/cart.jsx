@@ -5,7 +5,7 @@ import { deleteCart, Increament, Decreament } from "../config/redux/reducers/car
 
 const FinalCart = () => {
 
-
+    
     const dispatch = useDispatch();
     // DELETE
     const Delete = (id) => {
@@ -62,7 +62,7 @@ const FinalCart = () => {
                         </div> <br />
                         {/* DELETE CART BUTTON  */}
                         <div className='flex justify-center'>
-                            <button onClick={Delete} className="w-50 py-3 text-[#ff0000] border border-[#ff0000] font-semibold rounded-lg cursor-pointer hover:bg-[#ff0000] hover:text-white hover:shadow-md">
+                            <button onClick={() => Delete(item.id)} className="w-50 py-3 text-[#ff0000] border border-[#ff0000] font-semibold rounded-lg cursor-pointer hover:bg-[#ff0000] hover:text-white hover:shadow-md">
                                 DELETE <DeleteIcon />
                             </button>
                         </div>
