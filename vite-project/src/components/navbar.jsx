@@ -15,10 +15,10 @@ function NavigationMenu() {
       <div className="flex justify-between flex-wrap p-5 border-b-4 bg-[#f6f6f6]" >
         <div className={`flex flex-col md:flex-row md:items-center ${isOpen ? 'block' : 'hidden'} md:block`}>
           <ul className="flex flex-col md:flex-row gap-5">
-            <li className="cursor-pointer hover:underline"><Link to={''}>Login</Link></li>
-            <li className="cursor-pointer hover:underline"><Link to={'register'}>Register</Link></li>
+            <li className="cursor-pointer hover:underline"><Link to={''}>Home</Link></li>
+            <li className="cursor-pointer hover:underline"><Link to={'about'}>About</Link></li>
             <li className="cursor-pointer hover:underline"><Link to={'products'}>Products</Link></li>
-            <li className="cursor-pointer hover:underline"><Link to={'cart'}>Cart</Link></li>
+            <li className="cursor-pointer hover:underline"><Link to={'contact'}>Contact</Link></li>
           </ul>
         </div>
         <div className="text-lg">

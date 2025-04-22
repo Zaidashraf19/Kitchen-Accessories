@@ -14,7 +14,7 @@ const Products = () => {
             <h1 className='m-6 underline underline-offset-4 decoration-double text-4xl font-bold text-center'>PRODUCTS</h1>
             <div className="flex justify-center flex-wrap gap-10 mx-5">
                 {data.products.map((item , index) => {
-                    return <Cart key={item.id} id={item.id} product={item} title={item.title} description={item.description} image={item.thumbnail} index={index} />
+                    return <Cart key={item.id}  id={item.id} product={item} title={item.title} description={item.description} image={item.thumbnail} index={index} />
                 })}
             </div>
         </>

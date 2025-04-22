@@ -3,38 +3,48 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Layout from './layout'
-import Login from './pages/login'
-import Register from './pages/register'
+import Home from './pages/Home'
+import About from './pages/About'
 import Card from './pages/cart'
 import Products from './Pages/products'
-import SingleProduct from './Pages/singleproducts'
+import SingleProduct from './pages/singleproducts'
+import Contact from './pages/Contactus'
+import Checkout from './pages/checkout'
 import { Provider } from 'react-redux'
 import { store } from './config/redux/store/store'
 
 const router = createBrowserRouter([
   {
     path: '',
-    element: <Layout/>,
+    element: <Layout />,
     children: [
       {
         path: '',
-        element: <Login/>
+        element: <Home />
       },
       {
-        path: 'register',
-        element: <Register/>
+        path: 'about',
+        element: <About />
       },
       {
         path: 'cart',
-        element: <Card/>
+        element: <Card />
       },
       {
         path: 'products',
-        element: <Products/>
+        element: <Products />
       },
       {
         path: 'product/:id',
-        element: <SingleProduct/>
+        element: <SingleProduct />
+      },
+      {
+        path: 'contact',
+        element: <Contact />
+      },
+      {
+        path: 'cart/checkout',
+        element: <Checkout />
       },
     ]
   }
@@ -42,8 +52,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <Provider store={store}>
-  <StrictMode>
-    <RouterProvider router={router}/>
-  </StrictMode>,
+    <StrictMode>
+      <RouterProvider router={router} />
+    </StrictMode>,
   </Provider>
 )

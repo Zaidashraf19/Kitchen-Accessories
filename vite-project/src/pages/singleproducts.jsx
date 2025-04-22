@@ -34,16 +34,16 @@ const SingleProducts = () => {
     return (
         <>
             <div className="flex flex-col items-center my-15 gap-5">
-                <div className="border border-[#f6f6f6] bg-[#f6f6f6] rounded-lg w-100 shadow-lg">
-                    {/* IMAGE */}
+                {/* IMAGE */}
+                <div className="border border-[#f6f6f6] bg-[#f6f6f6] rounded-lg shadow-lg p-3">
                     <img
                         src={data.thumbnail}
                         alt={data.title}
-                        className="bg-black mx-10 text-white"
+                        className="bg-black text-white"
                     />
                 </div>
                 {/* PRICE AND TITLE */}
-                <div className="border-2 w-100 border-[#d8dfe0] rounded-lg p-3">
+                <div className="border-2 w-70 border-[#d8dfe0] rounded-lg p-3">
                     {/* Price */}
                     <h3>
                         <span className="font-extrabold text-xl">Price: </span>
@@ -68,12 +68,12 @@ const SingleProducts = () => {
                     </h3>
                 </div>
                 {/* DESCRIPTION */}
-                <div className="border-2 w-100 border-[#d8dfe0] rounded-lg p-3">
+                <div className="border-2 w-70 border-[#d8dfe0] rounded-lg p-3">
                     <h3 className="font-extrabold text-xl">Description: </h3>
                     <p className="text-sm">{data.description}</p>
                 </div>
                 {/* SHIPPING */}
-                <div className="border-2 w-100 border-[#d8dfe0] rounded-lg p-3">
+                <div className="border-2 w-70 border-[#d8dfe0] rounded-lg p-3">
                     <h3>
                         <span className="font-extrabold text-xl">Shipping: </span>
                         <span className="font-bold">{data.shippingInformation}</span> <br />
@@ -104,7 +104,7 @@ const SingleProducts = () => {
                     </h3>
                 </div>
                 {/* QR CODE */}
-                <div className="border-2 w-100 border-[#d8dfe0] rounded-lg p-3">
+                <div className="border-2 w-70 border-[#d8dfe0] rounded-lg p-3">
                     <span className="font-bold text-xl">Qr Code: </span>
                     <img
                         src={data.meta.qrCode}
@@ -117,10 +117,9 @@ const SingleProducts = () => {
                     </h3>
                 </div>
                 {/* ADD TO CARD BUTTON */}
-                <button onClick={addCartReducer} className="w-100 py-3 bg-black text-white font-semibold rounded-lg shadow-md cursor-pointer">
+                <button onClick={addCartReducer} className="w-70 py-3 bg-black text-white font-semibold rounded-lg shadow-md cursor-pointer">
                     Add to Cart
                 </button>
-
             </div>
         </>
     )

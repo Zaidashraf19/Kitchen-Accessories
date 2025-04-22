@@ -1,11 +1,9 @@
 const Footer = () => {
     return (
         <>
-            <div className="flex justify-center p-5 border-t-4 mt-5 bg-[#f6f6f6] text-xl">
-                <div className="items-center gap-8 list-none">
-                    <div>
-                        <h3 className="font-extrabold underline underline-offset-2">Contact Details</h3>
-                    </div>
+            <div className="p-5 border-t-4 mt-5 bg-[#f6f6f6]">
+            <h3 className="font-extrabold underline underline-offset-2 text-center text-xl uppercase">Contact Details</h3>
+            <div className="flex justify-start text-xl items-center gap-8 list-none flex-wrap">
                     <div>
                         <h2 className="font-bold">Head office address</h2>
                         <li>47 W 13th St, New York, NY 10011, USA</li>
@@ -16,7 +14,7 @@ const Footer = () => {
                     </div>
                     <div>
                         <h3 className="font-bold">Email Address</h3>
-                        <li>kitchenaccessories@gmail.com</li>
+                        <li className="text-sm">kitchenaccessories@gmail.com</li>
                     </div>
                     <div>
                         <h3 className="font-bold">Free delivery number</h3>
