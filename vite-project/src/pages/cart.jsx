@@ -5,7 +5,6 @@ import { deleteCart, Increament, Decreament } from "../config/redux/reducers/car
 
 const FinalCart = () => {
 
-    
     const dispatch = useDispatch();
     // DELETE
     const Delete = (id) => {
@@ -26,8 +25,6 @@ const FinalCart = () => {
     }
 
     // RENDERING DATA
-    const data = useSelector(state => state.Cart);
-    console.log(data);
     return (
         <>
             <h1 className='m-6 underline underline-offset-4 decoration-double text-4xl font-bold text-center'>YOUR CART</h1>
