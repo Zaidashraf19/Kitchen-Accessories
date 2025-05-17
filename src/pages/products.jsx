@@ -1,5 +1,5 @@
 import useFetch from "../hooks/usefetch";
-import Cart from "../components/card";
+import Cart from "../components/card.jsx";
 
 const Products = () => {
     const [loading, error, data] = useFetch('https://dummyjson.com/products/category/kitchen-accessories');
