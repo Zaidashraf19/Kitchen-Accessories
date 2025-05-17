@@ -43,7 +43,7 @@ const FinalCart = () => {
                 </div>
             ) : (
                 data.map((item) => (
-                    <div class="flex items-center gap-5 border-2 border-[#d8dfe0] rounded-lg p-3 w-full" key={item.id}>
+                    <div class="flex items-center gap-5 border-2 border-[#d8dfe0] rounded-lg p-3 w-full my-2" key={item.id}>
                         <div className="p-2 rounded-lg w-1/2">
                             <img
                                 src={item.title.thumbnail}
